@@ -6,7 +6,7 @@ let randomCharacter;
 let RandomUppercase;
 let randomLowercase;
 
-// declared arrays with characters, number and letters
+// Declared arrays with characters, number and letters
 character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "=", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -24,7 +24,9 @@ $generateBtn.addEventListener("click", function () {
 });
 
 let choices;
+//Function to create password
 function generatePassword() {
+    //Begin user inputs to customize password
     input = parseInt(prompt("How many characters would you like your password to have? Choose between 8 and 128"));
     if (!input) {
     alert("Choose a number between 8 and 128.");
@@ -36,7 +38,7 @@ function generatePassword() {
     RandomUppercase = confirm("Do you want your password to contain Uppercase letters? Select okay if yes, or cancel if not.");
     randomLowercase = confirm("Do you want your password contain lowercase letters? Select okay if yes, or cancel if not.");
     }
-
+    //if user doesnt read
     if (!randomCharacter && !randomNumber && !RandomUppercase && !randomLowercase) {
     choices = confirm(`Try Again!`);
     if (choices === true){
@@ -94,7 +96,7 @@ function generatePassword() {
     }
 
     let password = [];
-
+    //math.random used to generate the password based off of user prompt
     for (let i = 0; i < input; i++) {
     let pickChoices = choices[Math.floor(Math.random() * choices.length)];
     password.push(pickChoices);
