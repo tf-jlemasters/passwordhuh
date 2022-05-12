@@ -1,7 +1,7 @@
 # **Password Generator**
 https://jacklemasters.github.io/passwordhuh/
 ## Description 
-Simple JavaScript app to generate a random password anywhere between 8-128 characters.
+Simple JavaScript app to generate a random password anywhere between 8-128 characters. Forked from my orignal GitHub account.
 ## Table of contents
 - [Description](#Description)
 - [Installation](#Installation)
